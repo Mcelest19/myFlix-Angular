@@ -13,7 +13,8 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/my-flix-angular-client",
+            "baseHref": "/myFlix-Angular/",
+            "outputPath": "dist/myFlix-angular",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -61,10 +62,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "myFlix-Angular-client:build:production"
+              "browserTarget": "myFlix-Angular:build:production"
             },
             "development": {
-              "browserTarget": "myFlix-Angular-client:build:development"
+              "browserTarget": "myFlix-Angular:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -72,7 +73,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "myFlix-Angular-client:build"
+            "browserTarget": "myFlix-Angular:build"
           }
         },
         "test": {
